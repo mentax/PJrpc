@@ -1,0 +1,28 @@
+{
+  "name": "mentax/pjrpc",
+  "require": {
+    "psr/log": "^1.0",
+    "fguillot/json-rpc": "^1.2",
+    "netresearch/jsonmapper": "^1.4",
+    "guzzlehttp/guzzle": "^6.3",
+    "symfony/serializer": "^4.1",
+    "symfony/property-info": "^4.1",
+    "symfony/property-access": "^4.1",
+    "phpdocumentor/reflection-docblock": "^4.3"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "MentaxRpc\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MentaxRpc\\": "tests/",
+      "MentaxRpc\\Example\\": "public_html/",
+      "tests\\MentaxRpc\\": "tests/"
+    }
+  }
+}
