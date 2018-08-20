@@ -24,5 +24,7 @@
       "MentaxRpc\\Example\\": "public_html/",
       "tests\\MentaxRpc\\": "tests/"
     }
-  }
+  }, 
+  
+   "license": "MIT"
 }
