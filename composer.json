@@ -1,5 +1,13 @@
 {
   "name": "mentax/pjrpc",
+  "license": "mit",
+  "authors": [
+    {
+      "name": "Przemysław eRIZ Pawliczuk",
+      "email": "przemyslaw.pawliczuk@mentax.pl",
+      "role": "developer"
+    }
+  ],
   "require": {
     "psr/log": "^1.0",
     "fguillot/json-rpc": "^1.2",
