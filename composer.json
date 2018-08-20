@@ -15,16 +15,13 @@
   },
   "autoload": {
     "psr-4": {
-      "MentaxRpc\\": "src/"
+      "Mentax\\PJRPC\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "MentaxRpc\\": "tests/",
-      "MentaxRpc\\Example\\": "public_html/",
-      "tests\\MentaxRpc\\": "tests/"
+      "tests\\Mentax\\PJRPC\\": "tests/"
     }
-  }, 
+  }
   
-   "license": "MIT"
 }
