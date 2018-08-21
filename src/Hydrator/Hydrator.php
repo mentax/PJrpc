@@ -84,11 +84,13 @@ class Hydrator
 		return $var;
 	}
 
-    /**
-     * creates context for a serializer
-     * @param \Reflector $obj
-     * @return array|\phpDocumentor\Reflection\Types\Context
-     */
+	/**
+	 * creates context for a serializer.
+	 *
+	 * @param \Reflector $obj
+	 *
+	 * @return array|\phpDocumentor\Reflection\Types\Context
+	 */
 	public function createContext(\Reflector $obj)
 	{
 		$key = spl_object_hash($obj);
