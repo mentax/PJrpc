@@ -1,5 +1,6 @@
 {
   "name": "mentax/pjrpc",
+  "license": "MIT",
   "require": {
     "psr/log": "^1.0",
     "fguillot/json-rpc": "^1.2",
