@@ -6,6 +6,7 @@ use Mentax\PJRPC\Hydrator\Hydrator;
 use phpDocumentor\Reflection\Types\Context;
 use PHPUnit\Framework\TestCase;
 use tests\Mentax\PJRPC\Mocks\Client;
+use tests\Mentax\PJRPC\Mocks\Struct\DateTimeStruct;
 use tests\Mentax\PJRPC\Mocks\Struct\ExampleOtherStruct;
 
 class HydratorTest extends TestCase
@@ -95,4 +96,17 @@ class HydratorTest extends TestCase
 		$this->assertInstanceOf(Context::class, $ctx[0]);
 		$this->assertEquals('tests\Mentax\PJRPC\Mocks', $ctx[0]->getNamespace());
 	}
+
+    public function testDateTime()
+    {
+
+        $payload = [
+            'createdAt'=>'2011-03-01T12:54:58+01:00'
+        ];
+
+        $hydrator = new Hydrator();
+        $result = $hydrator->processPayload($payload, DateTimeStruct::class, new \ReflectionMethod(Client::class, 'dateTime'));
+
+        $this->assertInstanceOf(DateTimeStruct::class, $result);
+    }
 }

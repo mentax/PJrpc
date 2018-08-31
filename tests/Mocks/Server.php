@@ -2,6 +2,7 @@
 
 namespace tests\Mentax\PJRPC\Mocks;
 
+use tests\Mentax\PJRPC\Mocks\Struct\DateTimeStruct;
 use tests\Mentax\PJRPC\Mocks\Struct\ExampleOtherStruct;
 use tests\Mentax\PJRPC\Mocks\Struct\Sub\SubStruct;
 
@@ -66,4 +67,10 @@ class Server implements ApiInterface
 	{
 		throw new TestException();
 	}
+
+    public function dateTime(): DateTimeStruct
+    {
+        $result = new DateTimeStruct();
+        $result->createdAt = new \DateTime();
+    }
 }

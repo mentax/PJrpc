@@ -2,7 +2,9 @@
 
 namespace tests\Mentax\PJRPC\Mocks;
 
+use Mentax\EurotaxBus\Api\GetType\Model;
 use Mentax\PJRPC\Hydrator\HydratorClient;
+use tests\Mentax\PJRPC\Mocks\Struct\DateTimeStruct;
 use tests\Mentax\PJRPC\Mocks\Struct\ExampleOtherStruct;
 use tests\Mentax\PJRPC\Mocks\Struct\Sub\SubStruct;
 
@@ -64,5 +66,10 @@ class Client implements ApiInterface
 	public function exceptionWithIncorrectTagAction()
 	{
 		return $this->client->exceptionWIthIncorrectTagAction();
+	}
+
+    public function dateTime(): DateTimeStruct
+    {
+        return $this->client->dateTime();
 	}
 }

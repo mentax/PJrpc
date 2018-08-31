@@ -2,6 +2,7 @@
 
 namespace tests\Mentax\PJRPC\Mocks;
 
+use tests\Mentax\PJRPC\Mocks\Struct\DateTimeStruct;
 use tests\Mentax\PJRPC\Mocks\Struct\ExampleOtherStruct;
 use tests\Mentax\PJRPC\Mocks\Struct\Sub\SubStruct;
 
@@ -37,4 +38,6 @@ interface ApiInterface
 	 * @throws
 	 */
 	public function exceptionWithIncorrectTagAction();
+
+    public function dateTime(): DateTimeStruct;
 }

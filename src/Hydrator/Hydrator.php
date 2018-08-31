@@ -28,8 +28,10 @@ class Hydrator
 
 	public function __construct()
 	{
+	    $dateTimeDenormalizer = new DateTimeDenormalizer();
+
 		$normalizer = new ObjectNormalizer(null, null, null, new PhpDocExtractor());
-		$serializer = new Serializer([$normalizer, new PropertyNormalizer()]);
+		$serializer = new Serializer([$dateTimeDenormalizer, $normalizer, new PropertyNormalizer()]);
 
 		$arrayDenormalizer = new ArrayDenormalizer();
 		$arrayDenormalizer->setSerializer($serializer);
